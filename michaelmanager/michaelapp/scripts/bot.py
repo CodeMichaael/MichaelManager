@@ -5,7 +5,6 @@ import requests
 api_url = 'http://127.0.0.1:8000/connections'
 platform = interactions.Client(token="token")
 
-
 @interactions.slash_command(name='connect', description='Connect to MichaelManager', default_member_permissions=interactions.Permissions.ADMINISTRATOR)
 @interactions.slash_option(name="connection_id", description="Enter the connection ID given to you.", required=True, opt_type=OptionType.STRING)
 async def connect(ctx, connectionid: str):
